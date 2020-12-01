@@ -1,6 +1,6 @@
 {
   "name": "@phoenix-global/horizon-js",
-  "version": "2.33.1",
+  "version": "3.0.0",
   "description": "Horizon JS Library - access Horizon smart contracts from browser and Node.js",
   "main": "dist/main.node.js",
   "browser": "dist/main.js",
