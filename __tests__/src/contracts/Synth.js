@@ -1,6 +1,6 @@
 import { SynthetixJs } from '../../../src/index.node.js';
 import ContractSettings from '../../../src/contractSettings';
-import * as snx from 'synthetix';
+import * as hzn from '@phoenix-global/horizon';
 
 const { SUPPORTED_NETWORKS } = ContractSettings;
 
@@ -8,25 +8,25 @@ const contract = 'Synth';
 
 describe(`src/contracts/${contract}`, () => {
   Object.entries(SUPPORTED_NETWORKS).forEach(([networkId, network]) => {
-    let snxjs;
+    let hznjs;
     beforeAll(() => {
-      snxjs = new SynthetixJs({ networkId });
+      hznjs = new SynthetixJs({ networkId });
     });
 
     ['sUSD', 'sBTC', 'iBTC', 'sAUD'].forEach(synth => {
       describe(synth, () => {
         test(`${network} Should have correct address and ABI`, () => {
           () => {
-            expect(snxjs[synth].contract.address).toEqual(
-              snx.getTarget({ network, contract: `Proxy${synth}` }).address
+            expect(hznjs[synth].contract.address).toEqual(
+              hzn.getTarget({ network, contract: `Proxy${synth}` }).address
             );
           };
         });
 
         test(`${network} Should have correct ABI`, () => {
           () => {
-            expect(snxjs[synth].contract.interface.abi).toEqual(
-              snx.getSource({ network, contract }).abi
+            expect(hznjs[synth].contract.interface.abi).toEqual(
+              hzn.getSource({ network, contract }).abi
             );
           };
         });

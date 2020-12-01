@@ -1,4 +1,4 @@
-import * as snx from 'synthetix';
+import * as hzn from '@phoenix-global/horizon';
 import { SynthetixJs } from '../../src/index.node.js';
 import ContractSettings from '../../src/contractSettings';
 import { contracts } from '../../tools/abitojs';
@@ -8,9 +8,9 @@ const { SUPPORTED_NETWORKS } = ContractSettings;
 describe('auto-generated contracts', () => {
   Object.entries(SUPPORTED_NETWORKS).forEach(([networkId, network]) => {
     describe(network, () => {
-      let snxjs;
+      let hznjs;
       beforeAll(() => {
-        snxjs = new SynthetixJs({ networkId });
+        hznjs = new SynthetixJs({ networkId });
       });
 
       Object.entries(contracts).forEach(([contract, settings]) => {
@@ -20,8 +20,8 @@ describe('auto-generated contracts', () => {
               const targetContract =
                 typeof settings === 'object' ? settings.target || contract : contract;
 
-              expect(snxjs[contract].contract.address).toEqual(
-                snx.getTarget({ network, contract: targetContract }).address
+              expect(hznjs[contract].contract.address).toEqual(
+                hzn.getTarget({ network, contract: targetContract }).address
               );
             };
           });
@@ -30,8 +30,8 @@ describe('auto-generated contracts', () => {
             () => {
               const source = typeof settings === 'object' ? settings.source || contract : contract;
 
-              expect(snxjs[contract].contract.interface.abi).toEqual(
-                snx.getSource({ network, contract: source }).abi
+              expect(hznjs[contract].contract.interface.abi).toEqual(
+                hzn.getSource({ network, contract: source }).abi
               );
             };
           });

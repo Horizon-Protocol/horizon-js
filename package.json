@@ -1,11 +1,11 @@
 {
-  "name": "synthetix-js",
+  "name": "@phoenix-global/horizon-js",
   "version": "2.33.1",
-  "description": "Synthetix JS Library - access Synthetix smart contracts from browser and Node.js",
+  "description": "Horizon JS Library - access Horizon smart contracts from browser and Node.js",
   "main": "dist/main.node.js",
   "browser": "dist/main.js",
-  "homepage": "https://developer.synthetix.io",
-  "repository": "https://github.com/Synthetixio/synthetix-js",
+  "homepage": "https://www.horizonprotocol.com/",
+  "repository": "https://github.com/PhoenixGlobal/horizon-js",
   "scripts": {
     "test": "jest --runInBand --verbose",
     "clean-install": "rm ./package-lock.json && rm -rf node_modules/* && npm install",
@@ -16,12 +16,13 @@
     "webpack": "webpack --mode=production",
     "build": "npm run clear && npm run abitojs && npm run format && npm run webpack && npm test"
   },
-  "author": "Synthetix",
+  "author": "Horizon",
   "license": "MIT",
   "dependencies": {
     "@ledgerhq/hw-app-eth": "4.74.2",
     "@ledgerhq/hw-transport": "4.74.2",
     "@ledgerhq/hw-transport-u2f": "4.74.2",
+    "@phoenix-global/horizon": "^2.33.1",
     "@portis/web3": "^2.0.0-beta.59",
     "@walletconnect/web3-provider": "^1.0.15",
     "ethereumjs-tx": "1.3.7",
@@ -29,7 +30,6 @@
     "ethers": "4.0.44",
     "hdkey": "1.1.1",
     "lodash": "4.17.15",
-    "synthetix": "2.33.1",
     "trezor-connect": "8.1.8",
     "walletlink": "2.0.2"
   },
