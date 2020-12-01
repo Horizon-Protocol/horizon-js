@@ -5,7 +5,7 @@ import * as BinaryOptionsUtils from './util/binaryOptions';
 import ContractSettings from './contractSettings';
 import PrivateKey from '../lib/signers/privateKeySigner';
 
-class SynthetixJsBase {
+class HorizonJsBase {
   constructor(contractSettings, signers = { PrivateKey }) {
     // prevent warnings about "Multiple definitions" for transfer* function from Synth contract
     ethers.errors.setLogLevel('error');
@@ -27,4 +27,4 @@ class SynthetixJsBase {
   }
 }
 
-export default SynthetixJsBase;
+export default HorizonJsBase;

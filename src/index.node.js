@@ -1,19 +1,19 @@
 import { utils, providers } from 'ethers';
 
-import SynthetixJsBase from './SynthetixJsBase';
+import HorizonJsBase from './HorizonJsBase';
 import PrivateKey from '../lib/signers/privateKeySigner';
 
 const signers = {
   PrivateKey,
 };
 
-export class SynthetixJs extends SynthetixJsBase {
+export class HorizonJs extends HorizonJsBase {
   /**
    * Creates instances of Synthetix contracts based on ContractSettings.
    * Usage example:
-   * const {SynthetixJs} = require('SynthetixJs');
-   * const snxjs = new SynthetixJs(); //uses default ContractSettings - ethers.js default provider, mainnet
-   * const totalSupply = await snxjs.Synthetix.totalSupply();
+   * const {HorizonJs} = require('HorizonJs');
+   * const hznjs = new HorizonJs(); //uses default ContractSettings - ethers.js default provider, mainnet
+   * const totalSupply = await hznjs.Synthetix.totalSupply();
    * @constructor
    * @param contractSettings {ContractSettings}
    */
@@ -22,6 +22,6 @@ export class SynthetixJs extends SynthetixJsBase {
   }
 }
 
-SynthetixJs.signers = signers;
-SynthetixJs.utils = utils; // shortcut to ethers utils without having to create instance
-SynthetixJs.providers = providers;
+HorizonJs.signers = signers;
+HorizonJs.utils = utils; // shortcut to ethers utils without having to create instance
+HorizonJs.providers = providers;

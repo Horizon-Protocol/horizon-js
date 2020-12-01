@@ -1,5 +1,5 @@
 import * as hzn from '@phoenix-global/horizon';
-import { SynthetixJs } from '../../src/index.node.js';
+import { HorizonJs } from '../../src/index.node.js';
 import ContractSettings from '../../src/contractSettings';
 import { contracts } from '../../tools/abitojs';
 
@@ -10,7 +10,7 @@ describe('auto-generated contracts', () => {
     describe(network, () => {
       let hznjs;
       beforeAll(() => {
-        hznjs = new SynthetixJs({ networkId });
+        hznjs = new HorizonJs({ networkId });
       });
 
       Object.entries(contracts).forEach(([contract, settings]) => {

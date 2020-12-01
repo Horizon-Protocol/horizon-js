@@ -1,4 +1,4 @@
-import { SynthetixJs } from '../../../src/index.node.js';
+import { HorizonJs } from '../../../src/index.node.js';
 import ContractSettings from '../../../src/contractSettings';
 import * as hzn from '@phoenix-global/horizon';
 
@@ -10,7 +10,7 @@ describe(`src/contracts/${contract}`, () => {
   Object.entries(SUPPORTED_NETWORKS).forEach(([networkId, network]) => {
     let hznjs;
     beforeAll(() => {
-      hznjs = new SynthetixJs({ networkId });
+      hznjs = new HorizonJs({ networkId });
     });
 
     ['sUSD', 'sBTC', 'iBTC', 'sAUD'].forEach(synth => {
