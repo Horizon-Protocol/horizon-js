@@ -72,13 +72,3 @@ async function run() {
 
 run();
 ```
-
-## Live examples
-
-- Get total synth supply [![Get total supply](https://user-images.githubusercontent.com/799038/57645476-572dc780-758c-11e9-98e3-33846fb8c176.png)](https://codepen.io/justinjmoses/pen/vMKywz/left?editors=0010)
-- Get collateralized state [![image](https://user-images.githubusercontent.com/799038/57646044-ad4f3a80-758d-11e9-879e-4a507c2cf894.png)
-  ](https://codepen.io/justinjmoses/pen/qwqoBR/left?editors=0010)
-
-## Got any questions?
-
-Join our dev community on Discord: [![Discord](https://img.shields.io/discord/413890591840272394.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/413890591840272394/)
