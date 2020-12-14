@@ -1,6 +1,7 @@
 import { utils } from 'ethers';
 
 import HorizonJsBase from './HorizonJsBase';
+import Binance from '../lib/signers/binanceSigner';
 import Trezor from '../lib/signers/trezorSigner';
 import Metamask from '../lib/signers/metamaskSigner';
 import Ledger from '../lib/signers/ledgerSigner';
@@ -10,6 +11,7 @@ import WalletConnect from '../lib/signers/walletConnectSigner';
 import Portis from '../lib/signers/portisSigner';
 
 const signers = {
+  Binance,
   Trezor,
   Ledger,
   Metamask,
