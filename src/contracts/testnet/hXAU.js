@@ -1,15 +1,15 @@
 import { Contract } from 'ethers';
 import ContractSettings from '../../contractSettings';
-import abi from '../../../lib/abis/testnet/Synth';
+import abi from '../../../lib/abis/testnet/PurgeableSynth';
 
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sFTSE(contractSettings) {
+function hXAU(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysFTSE'],
+    this.contractSettings.addressList['ProxyhXAU'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -146,6 +146,14 @@ function sFTSE(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @returns BigNumber
+   **/
+  this.maxSupplyToPurgeInUSD = async () => {
+    return await this.contract.maxSupplyToPurgeInUSD();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @returns String<EthAddress>
    **/
   this.messageSender = async () => {
@@ -193,6 +201,17 @@ function sFTSE(contractSettings) {
    **/
   this.proxy = async () => {
     return await this.contract.proxy();
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param addresses {address[]}
+   * @param txParams {TxParams}
+  
+   **/
+  this.purge = async (addresses, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.purge(addresses, txParams);
   };
 
   /**
@@ -303,7 +322,6 @@ function sFTSE(contractSettings) {
   };
 
   /**
-   * Override ERC20 transfer function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param to {String<EthAddress>}
    * @param value {BigNumber}
@@ -328,7 +346,6 @@ function sFTSE(contractSettings) {
   };
 
   /**
-   * Override ERC20 transferFrom function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param from {String<EthAddress>}
    * @param to {String<EthAddress>}
@@ -364,4 +381,4 @@ function sFTSE(contractSettings) {
   };
 }
 
-export default sFTSE;
+export default hXAU;

@@ -13,9 +13,9 @@ describe(`src/contracts/${contract}`, () => {
       hznjs = new HorizonJs({ networkId });
     });
 
-    ['sUSD', 'sBTC', 'iBTC', 'sAUD'].forEach(synth => {
+    ['hUSD', 'hBTC', 'iBTC', 'hAUD'].forEach(synth => {
       describe(synth, () => {
-        test(`${network} Should have correct address and ABI`, () => {
+        test(`${network} Should have correct addres`, () => {
           () => {
             expect(hznjs[synth].contract.address).toEqual(
               hzn.getTarget({ network, contract: `Proxy${synth}` }).address

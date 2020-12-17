@@ -631,7 +631,7 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "susdAmount",
+				"name": "hUSDAmount",
 				"type": "uint256"
 			},
 			{

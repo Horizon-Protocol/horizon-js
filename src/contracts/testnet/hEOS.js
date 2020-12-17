@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/Synth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sADA(contractSettings) {
+function hEOS(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysADA'],
+    this.contractSettings.addressList['ProxyhEOS'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -364,4 +364,4 @@ function sADA(contractSettings) {
   };
 }
 
-export default sADA;
+export default hEOS;

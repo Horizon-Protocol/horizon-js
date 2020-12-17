@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/Synth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sDASH(contractSettings) {
+function hNIKKEI(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysDASH'],
+    this.contractSettings.addressList['ProxyhNIKKEI'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -364,4 +364,4 @@ function sDASH(contractSettings) {
   };
 }
 
-export default sDASH;
+export default hNIKKEI;

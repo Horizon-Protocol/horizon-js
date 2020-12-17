@@ -1,15 +1,15 @@
 import { Contract } from 'ethers';
 import ContractSettings from '../../contractSettings';
-import abi from '../../../lib/abis/testnet/MultiCollateralSynth';
+import abi from '../../../lib/abis/testnet/PurgeableSynth';
 
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sETH(contractSettings) {
+function hCHF(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysETH'],
+    this.contractSettings.addressList['ProxyhCHF'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -146,18 +146,18 @@ function sETH(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns String<EthAddress>
+   * @returns BigNumber
    **/
-  this.messageSender = async () => {
-    return await this.contract.messageSender();
+  this.maxSupplyToPurgeInUSD = async () => {
+    return await this.contract.maxSupplyToPurgeInUSD();
   };
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns bytes32
+   * @returns String<EthAddress>
    **/
-  this.multiCollateralKey = async () => {
-    return await this.contract.multiCollateralKey();
+  this.messageSender = async () => {
+    return await this.contract.messageSender();
   };
 
   /**
@@ -201,6 +201,17 @@ function sETH(contractSettings) {
    **/
   this.proxy = async () => {
     return await this.contract.proxy();
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param addresses {address[]}
+   * @param txParams {TxParams}
+  
+   **/
+  this.purge = async (addresses, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.purge(addresses, txParams);
   };
 
   /**
@@ -370,4 +381,4 @@ function sETH(contractSettings) {
   };
 }
 
-export default sETH;
+export default hCHF;

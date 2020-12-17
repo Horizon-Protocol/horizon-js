@@ -283,16 +283,16 @@ function Issuer(contractSettings) {
   /**
    * Transaction (consumes gas, requires signer)
    * @param account {String<EthAddress>}
-   * @param susdAmount {BigNumber}
+   * @param hUSDAmount {BigNumber}
    * @param liquidator {String<EthAddress>}
    * @param txParams {TxParams}
    * @returns Object
    **/
-  this.liquidateDelinquentAccount = async (account, susdAmount, liquidator, txParams) => {
+  this.liquidateDelinquentAccount = async (account, hUSDAmount, liquidator, txParams) => {
     txParams = txParams || {};
     return await this.contract.liquidateDelinquentAccount(
       account,
-      susdAmount,
+      hUSDAmount,
       liquidator,
       txParams
     );

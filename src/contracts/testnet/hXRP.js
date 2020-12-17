@@ -1,15 +1,15 @@
 import { Contract } from 'ethers';
 import ContractSettings from '../../contractSettings';
-import abi from '../../../lib/abis/testnet/PurgeableSynth';
+import abi from '../../../lib/abis/testnet/Synth';
 
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sDEFI(contractSettings) {
+function hXRP(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysDEFI'],
+    this.contractSettings.addressList['ProxyhXRP'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -146,14 +146,6 @@ function sDEFI(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-  this.maxSupplyToPurgeInUSD = async () => {
-    return await this.contract.maxSupplyToPurgeInUSD();
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
    * @returns String<EthAddress>
    **/
   this.messageSender = async () => {
@@ -201,17 +193,6 @@ function sDEFI(contractSettings) {
    **/
   this.proxy = async () => {
     return await this.contract.proxy();
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param addresses {address[]}
-   * @param txParams {TxParams}
-  
-   **/
-  this.purge = async (addresses, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.purge(addresses, txParams);
   };
 
   /**
@@ -322,6 +303,7 @@ function sDEFI(contractSettings) {
   };
 
   /**
+   * Override ERC20 transfer function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param to {String<EthAddress>}
    * @param value {BigNumber}
@@ -346,6 +328,7 @@ function sDEFI(contractSettings) {
   };
 
   /**
+   * Override ERC20 transferFrom function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param from {String<EthAddress>}
    * @param to {String<EthAddress>}
@@ -381,4 +364,4 @@ function sDEFI(contractSettings) {
   };
 }
 
-export default sDEFI;
+export default hXRP;

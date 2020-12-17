@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/Synth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sBTC(contractSettings) {
+function hAUD(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysBTC'],
+    this.contractSettings.addressList['ProxyhAUD'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -364,4 +364,4 @@ function sBTC(contractSettings) {
   };
 }
 
-export default sBTC;
+export default hAUD;

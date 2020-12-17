@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/Synth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sXMR(contractSettings) {
+function hADA(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysXMR'],
+    this.contractSettings.addressList['ProxyhADA'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -364,4 +364,4 @@ function sXMR(contractSettings) {
   };
 }
 
-export default sXMR;
+export default hADA;

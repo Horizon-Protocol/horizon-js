@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/PurgeableSynth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sLTC(contractSettings) {
+function hGBP(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysLTC'],
+    this.contractSettings.addressList['ProxyhGBP'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -381,4 +381,4 @@ function sLTC(contractSettings) {
   };
 }
 
-export default sLTC;
+export default hGBP;

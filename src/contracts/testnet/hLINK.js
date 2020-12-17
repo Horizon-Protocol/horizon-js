@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/Synth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sEOS(contractSettings) {
+function hLINK(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysEOS'],
+    this.contractSettings.addressList['ProxyhLINK'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -364,4 +364,4 @@ function sEOS(contractSettings) {
   };
 }
 
-export default sEOS;
+export default hLINK;

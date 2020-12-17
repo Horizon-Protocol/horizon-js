@@ -44,7 +44,7 @@
 			{
 				"indexed": false,
 				"internalType": "uint256",
-				"name": "snxRedeemed",
+				"name": "hznRedeemed",
 				"type": "uint256"
 			},
 			{
@@ -1029,6 +1029,22 @@
 	{
 		"constant": true,
 		"inputs": [],
+		"name": "hUSD",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0xb21b94a9"
+	},
+	{
+		"constant": true,
+		"inputs": [],
 		"name": "integrationProxy",
 		"outputs": [
 			{
@@ -1159,7 +1175,7 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "susdAmount",
+				"name": "hUSDAmount",
 				"type": "uint256"
 			}
 		],
@@ -1416,22 +1432,6 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0xc6c9d828"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "sUSD",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function",
-		"signature": "0x9324cac7"
 	},
 	{
 		"constant": false,

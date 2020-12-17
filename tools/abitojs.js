@@ -5,7 +5,7 @@ const hzn = require('@phoenix-global/horizon');
 const docsDescriptions = require('../lib/docSrc/descriptions');
 
 const SUPPORTED_NETWORKS = {
-  56: 'mainnet',
+  // 56: 'mainnet',
   97: 'testnet',
 };
 
@@ -35,7 +35,7 @@ const contracts = {
     target: 'ProxyFeePool',
   },
   Synth: {
-    target: 'ProxyERC20sUSD',
+    target: 'ProxyERC20hUSD',
   },
   Synthetix: {
     target: 'ProxyERC20',
@@ -148,7 +148,7 @@ const generate = () => {
     // add the synth contract as well (target addresses are their proxies, and source is the synth contract)
     const synthContracts = hzn.getSynths({ network }).reduce((memo, { name, subclass }) => {
       memo[name] = {
-        target: `Proxy${name === 'sUSD' ? 'ERC20sUSD' : name}`,
+        target: `Proxy${name === 'hUSD' ? 'ERC20hUSD' : name}`,
         source: subclass || 'Synth',
       };
       return memo;

@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/Synth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sXTZ(contractSettings) {
+function hJPY(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysXTZ'],
+    this.contractSettings.addressList['ProxyhJPY'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -364,4 +364,4 @@ function sXTZ(contractSettings) {
   };
 }
 
-export default sXTZ;
+export default hJPY;

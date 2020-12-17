@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/Synth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sLINK(contractSettings) {
+function hFTSE(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysLINK'],
+    this.contractSettings.addressList['ProxyhFTSE'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -364,4 +364,4 @@ function sLINK(contractSettings) {
   };
 }
 
-export default sLINK;
+export default hFTSE;

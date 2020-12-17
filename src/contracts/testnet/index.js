@@ -20,30 +20,30 @@ import SynthUtil from './SynthUtil';
 import EtherCollateralsUSD from './EtherCollateralsUSD';
 import Liquidations from './Liquidations';
 import SystemSettings from './SystemSettings';
-import sUSD from './sUSD';
-import sEUR from './sEUR';
-import sJPY from './sJPY';
-import sAUD from './sAUD';
-import sGBP from './sGBP';
-import sCHF from './sCHF';
-import sXAU from './sXAU';
-import sXAG from './sXAG';
-import sBTC from './sBTC';
-import sETH from './sETH';
-import sBNB from './sBNB';
-import sTRX from './sTRX';
-import sXTZ from './sXTZ';
-import sXRP from './sXRP';
-import sLTC from './sLTC';
-import sLINK from './sLINK';
-import sEOS from './sEOS';
-import sBCH from './sBCH';
-import sETC from './sETC';
-import sDASH from './sDASH';
-import sXMR from './sXMR';
-import sADA from './sADA';
-import sCEX from './sCEX';
-import sDEFI from './sDEFI';
+import hUSD from './hUSD';
+import hEUR from './hEUR';
+import hJPY from './hJPY';
+import hAUD from './hAUD';
+import hGBP from './hGBP';
+import hCHF from './hCHF';
+import hXAU from './hXAU';
+import hXAG from './hXAG';
+import hBTC from './hBTC';
+import hETH from './hETH';
+import hBNB from './hBNB';
+import hTRX from './hTRX';
+import hXTZ from './hXTZ';
+import hXRP from './hXRP';
+import hLTC from './hLTC';
+import hLINK from './hLINK';
+import hEOS from './hEOS';
+import hBCH from './hBCH';
+import hETC from './hETC';
+import hDASH from './hDASH';
+import hXMR from './hXMR';
+import hADA from './hADA';
+import hCEX from './hCEX';
+import hDEFI from './hDEFI';
 import iBTC from './iBTC';
 import iETH from './iETH';
 import iBNB from './iBNB';
@@ -51,8 +51,8 @@ import iTRX from './iTRX';
 import iXTZ from './iXTZ';
 import iCEX from './iCEX';
 import iDEFI from './iDEFI';
-import sFTSE from './sFTSE';
-import sNIKKEI from './sNIKKEI';
+import hFTSE from './hFTSE';
+import hNIKKEI from './hNIKKEI';
 
 export default {
   Depot,
@@ -77,30 +77,30 @@ export default {
   EtherCollateralsUSD,
   Liquidations,
   SystemSettings,
-  sUSD,
-  sEUR,
-  sJPY,
-  sAUD,
-  sGBP,
-  sCHF,
-  sXAU,
-  sXAG,
-  sBTC,
-  sETH,
-  sBNB,
-  sTRX,
-  sXTZ,
-  sXRP,
-  sLTC,
-  sLINK,
-  sEOS,
-  sBCH,
-  sETC,
-  sDASH,
-  sXMR,
-  sADA,
-  sCEX,
-  sDEFI,
+  hUSD,
+  hEUR,
+  hJPY,
+  hAUD,
+  hGBP,
+  hCHF,
+  hXAU,
+  hXAG,
+  hBTC,
+  hETH,
+  hBNB,
+  hTRX,
+  hXTZ,
+  hXRP,
+  hLTC,
+  hLINK,
+  hEOS,
+  hBCH,
+  hETC,
+  hDASH,
+  hXMR,
+  hADA,
+  hCEX,
+  hDEFI,
   iBTC,
   iETH,
   iBNB,
@@ -108,6 +108,6 @@ export default {
   iXTZ,
   iCEX,
   iDEFI,
-  sFTSE,
-  sNIKKEI,
+  hFTSE,
+  hNIKKEI,
 };

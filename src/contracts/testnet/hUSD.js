@@ -5,11 +5,11 @@ import abi from '../../../lib/abis/testnet/MultiCollateralSynth';
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sUSD(contractSettings) {
+function hUSD(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxyERC20sUSD'],
+    this.contractSettings.addressList['ProxyERC20hUSD'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -370,4 +370,4 @@ function sUSD(contractSettings) {
   };
 }
 
-export default sUSD;
+export default hUSD;

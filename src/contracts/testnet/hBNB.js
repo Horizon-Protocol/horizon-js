@@ -1,15 +1,15 @@
 import { Contract } from 'ethers';
 import ContractSettings from '../../contractSettings';
-import abi from '../../../lib/abis/testnet/PurgeableSynth';
+import abi from '../../../lib/abis/testnet/MultiCollateralSynth';
 
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function sCHF(contractSettings) {
+function hBNB(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxysCHF'],
+    this.contractSettings.addressList['ProxyhBNB'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -146,18 +146,18 @@ function sCHF(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns BigNumber
-   **/
-  this.maxSupplyToPurgeInUSD = async () => {
-    return await this.contract.maxSupplyToPurgeInUSD();
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
    * @returns String<EthAddress>
    **/
   this.messageSender = async () => {
     return await this.contract.messageSender();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32
+   **/
+  this.multiCollateralKey = async () => {
+    return await this.contract.multiCollateralKey();
   };
 
   /**
@@ -201,17 +201,6 @@ function sCHF(contractSettings) {
    **/
   this.proxy = async () => {
     return await this.contract.proxy();
-  };
-
-  /**
-   * Transaction (consumes gas, requires signer)
-   * @param addresses {address[]}
-   * @param txParams {TxParams}
-  
-   **/
-  this.purge = async (addresses, txParams) => {
-    txParams = txParams || {};
-    return await this.contract.purge(addresses, txParams);
   };
 
   /**
@@ -381,4 +370,4 @@ function sCHF(contractSettings) {
   };
 }
 
-export default sCHF;
+export default hBNB;

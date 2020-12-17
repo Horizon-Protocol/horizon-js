@@ -4,7 +4,7 @@ import ABIS from '../lib/abis';
 import synths from '../lib/synths';
 
 const SUPPORTED_NETWORKS = {
-  56: 'mainnet',
+  // 56: 'mainnet',
   97: 'testnet',
 };
 
