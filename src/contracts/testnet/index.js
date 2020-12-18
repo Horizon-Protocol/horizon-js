@@ -8,6 +8,7 @@ import SynthetixEscrow from './SynthetixEscrow';
 import SynthetixState from './SynthetixState';
 import RewardEscrow from './RewardEscrow';
 import DappMaintenance from './DappMaintenance';
+import Exchanger from './Exchanger';
 import EtherCollateral from './EtherCollateral';
 import Issuer from './Issuer';
 import AddressResolver from './AddressResolver';
@@ -65,6 +66,7 @@ export default {
   SynthetixState,
   RewardEscrow,
   DappMaintenance,
+  Exchanger,
   EtherCollateral,
   Issuer,
   AddressResolver,
