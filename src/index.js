@@ -2,23 +2,23 @@ import { utils } from 'ethers';
 
 import HorizonJsBase from './HorizonJsBase';
 import Binance from '../lib/signers/binanceSigner';
-import Trezor from '../lib/signers/trezorSigner';
 import Metamask from '../lib/signers/metamaskSigner';
-import Ledger from '../lib/signers/ledgerSigner';
-import Coinbase from '../lib/signers/coinbaseSigner';
-import PrivateKey from '../lib/signers/privateKeySigner';
-import WalletConnect from '../lib/signers/walletConnectSigner';
-import Portis from '../lib/signers/portisSigner';
+// import Trezor from '../lib/signers/trezorSigner';
+// import Ledger from '../lib/signers/ledgerSigner';
+// import Coinbase from '../lib/signers/coinbaseSigner';
+// import PrivateKey from '../lib/signers/privateKeySigner';
+// import WalletConnect from '../lib/signers/walletConnectSigner';
+// import Portis from '../lib/signers/portisSigner';
 
 const signers = {
   Binance,
-  Trezor,
-  Ledger,
   Metamask,
-  PrivateKey,
-  Coinbase,
-  WalletConnect,
-  Portis,
+  // Trezor,
+  // Ledger,
+  // PrivateKey,
+  // Coinbase,
+  // WalletConnect,
+  // Portis,
 };
 
 export class HorizonJs extends HorizonJsBase {
