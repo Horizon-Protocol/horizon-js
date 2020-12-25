@@ -81,6 +81,24 @@ function ExchangeRates(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
+   * @returns String<EthAddress>
+   **/
+  this.bandProtocolOracle = async () => {
+    return await this.contract.bandProtocolOracle();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @param _bytes32 {bytes32}
+   * @param offset {Number}
+   * @returns String
+   **/
+  this.bytes32ToString = async (_bytes32, offset) => {
+    return await this.contract.bytes32ToString(_bytes32, offset);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
    * @param currencyKey {bytes32}
    * @returns boolean
    **/
@@ -466,6 +484,17 @@ function ExchangeRates(contractSettings) {
    **/
   this.roundFrozen = async bytes32_1 => {
     return await this.contract.roundFrozen(bytes32_1);
+  };
+
+  /**
+   * Transaction (consumes gas, requires signer)
+   * @param _bandProtocolOracle {String<EthAddress>}
+   * @param txParams {TxParams}
+  
+   **/
+  this.setBandProtocolOracle = async (_bandProtocolOracle, txParams) => {
+    txParams = txParams || {};
+    return await this.contract.setBandProtocolOracle(_bandProtocolOracle, txParams);
   };
 
   /**

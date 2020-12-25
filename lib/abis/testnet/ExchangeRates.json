@@ -77,6 +77,20 @@
 		"inputs": [
 			{
 				"indexed": false,
+				"internalType": "contract IStdReference",
+				"name": "newBandProtocolOracle",
+				"type": "address"
+			}
+		],
+		"name": "BandProtocolOracleUpdated",
+		"type": "event",
+		"signature": "0xf8e7a0309aeef6891a3a359dac28329c30542ccad8dab686cf0ad8d2c277e40e"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
 				"internalType": "bytes32",
 				"name": "currencyKey",
 				"type": "bytes32"
@@ -346,6 +360,49 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0x0a7d36d1"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "bandProtocolOracle",
+		"outputs": [
+			{
+				"internalType": "contract IStdReference",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0x7f5c1034"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_bytes32",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint8",
+				"name": "offset",
+				"type": "uint8"
+			}
+		],
+		"name": "bytes32ToString",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function",
+		"signature": "0x9b687726"
 	},
 	{
 		"constant": true,
@@ -1236,6 +1293,22 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0x7f6e9d15"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "contract IStdReference",
+				"name": "_bandProtocolOracle",
+				"type": "address"
+			}
+		],
+		"name": "setBandProtocolOracle",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function",
+		"signature": "0x787e9383"
 	},
 	{
 		"constant": false,

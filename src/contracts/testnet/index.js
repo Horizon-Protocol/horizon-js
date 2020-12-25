@@ -43,17 +43,11 @@ import hETC from './hETC';
 import hDASH from './hDASH';
 import hXMR from './hXMR';
 import hADA from './hADA';
-import hCEX from './hCEX';
-import hDEFI from './hDEFI';
 import iBTC from './iBTC';
 import iETH from './iETH';
 import iBNB from './iBNB';
 import iTRX from './iTRX';
 import iXTZ from './iXTZ';
-import iCEX from './iCEX';
-import iDEFI from './iDEFI';
-import hFTSE from './hFTSE';
-import hNIKKEI from './hNIKKEI';
 
 export default {
   Depot,
@@ -101,15 +95,9 @@ export default {
   hDASH,
   hXMR,
   hADA,
-  hCEX,
-  hDEFI,
   iBTC,
   iETH,
   iBNB,
   iTRX,
   iXTZ,
-  iCEX,
-  iDEFI,
-  hFTSE,
-  hNIKKEI,
 };
