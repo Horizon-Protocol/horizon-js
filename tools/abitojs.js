@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const hzn = require('@phoenix-global/horizon');
+const hzn = require('@horizon-protocol/smart-contract');
 const docsDescriptions = require('../lib/docSrc/descriptions');
 
 const SUPPORTED_NETWORKS = {

@@ -8,7 +8,6 @@ import SynthetixEscrow from './SynthetixEscrow';
 import SynthetixState from './SynthetixState';
 import RewardEscrow from './RewardEscrow';
 import DappMaintenance from './DappMaintenance';
-import Exchanger from './Exchanger';
 import EtherCollateral from './EtherCollateral';
 import Issuer from './Issuer';
 import AddressResolver from './AddressResolver';
@@ -21,33 +20,8 @@ import SynthUtil from './SynthUtil';
 import EtherCollateralsUSD from './EtherCollateralsUSD';
 import Liquidations from './Liquidations';
 import SystemSettings from './SystemSettings';
-import hUSD from './hUSD';
-import hEUR from './hEUR';
-import hJPY from './hJPY';
-import hAUD from './hAUD';
-import hGBP from './hGBP';
-import hCHF from './hCHF';
-import hXAU from './hXAU';
-import hXAG from './hXAG';
-import hBTC from './hBTC';
-import hETH from './hETH';
-import hBNB from './hBNB';
-import hTRX from './hTRX';
-import hXTZ from './hXTZ';
-import hXRP from './hXRP';
-import hLTC from './hLTC';
-import hLINK from './hLINK';
-import hEOS from './hEOS';
-import hBCH from './hBCH';
-import hETC from './hETC';
-import hDASH from './hDASH';
-import hXMR from './hXMR';
-import hADA from './hADA';
-import iBTC from './iBTC';
-import iETH from './iETH';
-import iBNB from './iBNB';
-import iTRX from './iTRX';
-import iXTZ from './iXTZ';
+import zUSD from './zUSD';
+import zBNB from './zBNB';
 
 export default {
   Depot,
@@ -60,7 +34,6 @@ export default {
   SynthetixState,
   RewardEscrow,
   DappMaintenance,
-  Exchanger,
   EtherCollateral,
   Issuer,
   AddressResolver,
@@ -73,31 +46,6 @@ export default {
   EtherCollateralsUSD,
   Liquidations,
   SystemSettings,
-  hUSD,
-  hEUR,
-  hJPY,
-  hAUD,
-  hGBP,
-  hCHF,
-  hXAU,
-  hXAG,
-  hBTC,
-  hETH,
-  hBNB,
-  hTRX,
-  hXTZ,
-  hXRP,
-  hLTC,
-  hLINK,
-  hEOS,
-  hBCH,
-  hETC,
-  hDASH,
-  hXMR,
-  hADA,
-  iBTC,
-  iETH,
-  iBNB,
-  iTRX,
-  iXTZ,
+  zUSD,
+  zBNB,
 };

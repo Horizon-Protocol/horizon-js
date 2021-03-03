@@ -1,4 +1,4 @@
-import * as hzn from '@phoenix-global/horizon';
+import * as hzn from '@horizon-protocol/smart-contract';
 import { HorizonJs } from '../../src/index.node.js';
 import ContractSettings from '../../src/contractSettings';
 import { contracts } from '../../tools/abitojs';

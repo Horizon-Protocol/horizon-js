@@ -1,6 +1,6 @@
 import ContractSettings from '../../src/contractSettings';
 import synths from '../../lib/synths';
-import * as hzn from '@phoenix-global/horizon';
+import * as hzn from '@horizon-protocol/smart-contract';
 
 const { SUPPORTED_NETWORKS } = ContractSettings;
 
