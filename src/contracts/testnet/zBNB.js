@@ -1,15 +1,15 @@
 import { Contract } from 'ethers';
 import ContractSettings from '../../contractSettings';
-import abi from '../../../lib/abis/testnet/Synth';
+import abi from '../../../lib/abis/testnet/MultiCollateralSynth';
 
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function hETH(contractSettings) {
+function zBNB(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxyhETH'],
+    this.contractSettings.addressList['ProxyzBNB'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -150,6 +150,14 @@ function hETH(contractSettings) {
    **/
   this.messageSender = async () => {
     return await this.contract.messageSender();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32
+   **/
+  this.multiCollateralKey = async () => {
+    return await this.contract.multiCollateralKey();
   };
 
   /**
@@ -303,7 +311,6 @@ function hETH(contractSettings) {
   };
 
   /**
-   * Override ERC20 transfer function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param to {String<EthAddress>}
    * @param value {BigNumber}
@@ -328,7 +335,6 @@ function hETH(contractSettings) {
   };
 
   /**
-   * Override ERC20 transferFrom function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param from {String<EthAddress>}
    * @param to {String<EthAddress>}
@@ -364,4 +370,4 @@ function hETH(contractSettings) {
   };
 }
 
-export default hETH;
+export default zBNB;

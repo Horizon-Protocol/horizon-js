@@ -435,14 +435,6 @@ function Synthetix(contractSettings) {
 
   /**
    * Call (no gas consumed, doesn't require signer)
-   * @returns bytes32
-   **/
-  this.hUSD = async () => {
-    return await this.contract.hUSD();
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
    * @returns String<EthAddress>
    **/
   this.integrationProxy = async () => {
@@ -516,13 +508,13 @@ function Synthetix(contractSettings) {
   /**
    * Transaction (consumes gas, requires signer)
    * @param account {String<EthAddress>}
-   * @param hUSDAmount {BigNumber}
+   * @param zUSDAmount {BigNumber}
    * @param txParams {TxParams}
    * @returns boolean
    **/
-  this.liquidateDelinquentAccount = async (account, hUSDAmount, txParams) => {
+  this.liquidateDelinquentAccount = async (account, zUSDAmount, txParams) => {
     txParams = txParams || {};
-    return await this.contract.liquidateDelinquentAccount(account, hUSDAmount, txParams);
+    return await this.contract.liquidateDelinquentAccount(account, zUSDAmount, txParams);
   };
 
   /**
@@ -808,6 +800,14 @@ function Synthetix(contractSettings) {
    **/
   this.transferableSynthetix = async account => {
     return await this.contract.transferableSynthetix(account);
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32
+   **/
+  this.zUSD = async () => {
+    return await this.contract.zUSD();
   };
 }
 

@@ -1029,22 +1029,6 @@
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "hUSD",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function",
-		"signature": "0xb21b94a9"
-	},
-	{
-		"constant": true,
-		"inputs": [],
 		"name": "integrationProxy",
 		"outputs": [
 			{
@@ -1175,7 +1159,7 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "hUSDAmount",
+				"name": "zUSDAmount",
 				"type": "uint256"
 			}
 		],
@@ -1761,5 +1745,21 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0x6ac0bf9c"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "zUSD",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0x1a34e6ff"
 	}
 ]

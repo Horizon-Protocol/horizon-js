@@ -1,6 +1,6 @@
 import ContractSettings from '../../src/contractSettings';
 import abis from '../../lib/abis';
-import * as hzn from '@phoenix-global/horizon';
+import * as hzn from '@horizon-protocol/smart-contract';
 
 const { SUPPORTED_NETWORKS } = ContractSettings;
 describe('lib/abis', () => {

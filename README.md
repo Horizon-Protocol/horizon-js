@@ -6,13 +6,13 @@
 
 The Horizon-JS Library provides a simple pre-packaged API to communicate with [Horizon](https://www.horizonprotocol.com/) on binance smart chain. You can use it to contribute to DeFi's growing horizon asset ecosystem.
 
-This is particularly useful for hackathon teams to quickly `npm install @phoenix-global/horizon-js` and start building in just a few minutes.
+This is particularly useful for hackathon teams to quickly `npm install @horizon-protocol/horizon-js` and start building in just a few minutes.
 
 Under the hood, HorizonJs uses [ethers.js](https://github.com/ethers-io/ethers.js/) library and its concept of [providers](https://docs.ethers.io/ethers.js/html/api-providers.html) and [transaction signers](https://docs.ethers.io/ethers.js/html/api-contract.html#custom-signer).
 
 ## Install via npm
 
-`npm install @phoenix-global/horizon-js`
+`npm install @horizon-protocol/horizon-js`
 
 ## Developer Docs
 
@@ -21,7 +21,7 @@ Under the hood, HorizonJs uses [ethers.js](https://github.com/ethers-io/ethers.j
 ## Example for getting the total sUSD stablecoin in circulation
 
 ```javascript
-const { HorizonJs } = require('@phoenix-global/horizon-js');
+const { HorizonJs } = require('@horizon-protocol/horizon-js');
 const hznjs = new HorizonJs(); //uses default ContractSettings - ethers.js default provider, mainnet
 (async function() {
   const totalSUSD = await hznjs.sUSD.totalSupply();
@@ -39,7 +39,7 @@ Custom ethers.js compatible signers can be used too.
 ## Example using a metamask signer
 
 ```javascript
-const { HorizonJs } = require('@phoenix-global/horizon-js');
+const { HorizonJs } = require('@horizon-protocol/horizon-js');
 const metaMaskSigner = new HorizonJs.signers.Metamask();
 const hznjs = new HorizonJs({ signer: metaMaskSigner }); //uses Metamask signer and default infura.io provider on mainnet
 ```
@@ -47,7 +47,7 @@ const hznjs = new HorizonJs({ signer: metaMaskSigner }); //uses Metamask signer 
 ## Example of minting stablecoin(sUSD) with private key signer
 
 ```javascript
-const { HorizonJs } = require('@phoenix-global/horizon-js');
+const { HorizonJs } = require('@horizon-protocol/horizon-js');
 //parameters: default provider, default networkId, private key as a string
 const signer = new HorizonJs.signers.PrivateKey(
   null,

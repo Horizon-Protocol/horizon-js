@@ -1,15 +1,15 @@
 import { Contract } from 'ethers';
 import ContractSettings from '../../contractSettings';
-import abi from '../../../lib/abis/testnet/Synth';
+import abi from '../../../lib/abis/testnet/MultiCollateralSynth';
 
 /** @constructor
  * @param contractSettings {ContractSettings}
  */
-function hBCH(contractSettings) {
+function zUSD(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxyhBCH'],
+    this.contractSettings.addressList['ProxyERC20zUSD'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );
@@ -150,6 +150,14 @@ function hBCH(contractSettings) {
    **/
   this.messageSender = async () => {
     return await this.contract.messageSender();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32
+   **/
+  this.multiCollateralKey = async () => {
+    return await this.contract.multiCollateralKey();
   };
 
   /**
@@ -303,7 +311,6 @@ function hBCH(contractSettings) {
   };
 
   /**
-   * Override ERC20 transfer function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param to {String<EthAddress>}
    * @param value {BigNumber}
@@ -328,7 +335,6 @@ function hBCH(contractSettings) {
   };
 
   /**
-   * Override ERC20 transferFrom function in order to subtract the transaction fee and send it to the fee pool for SNX holders to claim.<br>
    * Transaction (consumes gas, requires signer)
    * @param from {String<EthAddress>}
    * @param to {String<EthAddress>}
@@ -364,4 +370,4 @@ function hBCH(contractSettings) {
   };
 }
 
-export default hBCH;
+export default zUSD;

@@ -1,6 +1,6 @@
 import { HorizonJs } from '../../../src/index.node.js';
 import ContractSettings from '../../../src/contractSettings';
-import * as hzn from '@phoenix-global/horizon';
+import * as hzn from '@horizon-protocol/smart-contract';
 
 const { SUPPORTED_NETWORKS } = ContractSettings;
 
@@ -13,7 +13,7 @@ describe(`src/contracts/${contract}`, () => {
       hznjs = new HorizonJs({ networkId });
     });
 
-    ['hUSD', 'hBTC', 'iBTC', 'hAUD'].forEach(synth => {
+    ['zUSD'].forEach(synth => {
       describe(synth, () => {
         test(`${network} Should have correct addres`, () => {
           () => {
