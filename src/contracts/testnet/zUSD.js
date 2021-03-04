@@ -9,7 +9,7 @@ function zUSD(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxyzUSD'],
+    this.contractSettings.addressList['ProxyERC20zUSD'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );

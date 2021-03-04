@@ -9,7 +9,7 @@ function Synth(contractSettings) {
   this.contractSettings = contractSettings || new ContractSettings();
 
   this.contract = new Contract(
-    this.contractSettings.addressList['ProxyERC20hUSD'],
+    this.contractSettings.addressList['ProxyERC20zUSD'],
     abi,
     this.contractSettings.signer || this.contractSettings.provider
   );

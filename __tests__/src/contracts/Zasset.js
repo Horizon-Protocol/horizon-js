@@ -13,7 +13,7 @@ describe(`src/contracts/${contract}`, () => {
       hznjs = new HorizonJs({ networkId });
     });
 
-    ['zUSD', 'zBTC', 'iBTC', 'zAUD'].forEach(synth => {
+    ['zUSD'].forEach(synth => {
       describe(synth, () => {
         test(`${network} Should have correct addres`, () => {
           () => {

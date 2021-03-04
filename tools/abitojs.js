@@ -35,7 +35,7 @@ const contracts = {
     target: 'ProxyFeePool',
   },
   Synth: {
-    target: 'ProxyERC20hUSD',
+    target: 'ProxyERC20zUSD',
   },
   Synthetix: {
     target: 'ProxyERC20',
@@ -148,7 +148,7 @@ const generate = () => {
     // add the synth contract as well (target addresses are their proxies, and source is the synth contract)
     const synthContracts = hzn.getSynths({ network }).reduce((memo, { name, subclass }) => {
       memo[name] = {
-        target: `Proxy${name === 'hUSD' ? 'ERC20hUSD' : name}`,
+        target: `Proxy${name === 'zUSD' ? 'ERC20zUSD' : name}`,
         source: subclass || 'Synth',
       };
       return memo;
