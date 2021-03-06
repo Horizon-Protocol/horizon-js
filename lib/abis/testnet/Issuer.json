@@ -631,7 +631,7 @@
 			},
 			{
 				"internalType": "uint256",
-				"name": "hUSDAmount",
+				"name": "zUSDAmount",
 				"type": "uint256"
 			},
 			{

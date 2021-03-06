@@ -26,14 +26,6 @@ function SystemStatus(contractSettings) {
    * Call (no gas consumed, doesn't require signer)
    * @returns bytes32
    **/
-  this.SECTION_HASSET = async () => {
-    return await this.contract.SECTION_HASSET();
-  };
-
-  /**
-   * Call (no gas consumed, doesn't require signer)
-   * @returns bytes32
-   **/
   this.SECTION_ISSUANCE = async () => {
     return await this.contract.SECTION_ISSUANCE();
   };
@@ -44,6 +36,14 @@ function SystemStatus(contractSettings) {
    **/
   this.SECTION_SYSTEM = async () => {
     return await this.contract.SECTION_SYSTEM();
+  };
+
+  /**
+   * Call (no gas consumed, doesn't require signer)
+   * @returns bytes32
+   **/
+  this.SECTION_ZASSET = async () => {
+    return await this.contract.SECTION_ZASSET();
   };
 
   /**

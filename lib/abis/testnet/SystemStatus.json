@@ -221,22 +221,6 @@
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "SECTION_HASSET",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function",
-		"signature": "0x42373e33"
-	},
-	{
-		"constant": true,
-		"inputs": [],
 		"name": "SECTION_ISSUANCE",
 		"outputs": [
 			{
@@ -265,6 +249,22 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0x12bde514"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "SECTION_ZASSET",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0x516ccb22"
 	},
 	{
 		"constant": true,
