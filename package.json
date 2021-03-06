@@ -1,6 +1,6 @@
 {
   "name": "@horizon-protocol/horizon-js",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "description": "Horizon JS Library - access Horizon smart contracts from browser and Node.js",
   "main": "dist/main.node.js",
   "browser": "dist/main.js",
